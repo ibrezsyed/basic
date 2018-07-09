@@ -14,7 +14,7 @@ public class BasicApplication {
 	public static void main(String[] args) {
 		
 		Logger log = LoggerFactory.getLogger(BasicApplication.class);
-		
+		System.out.println("=========================");
 		SpringApplication app = new SpringApplication(BasicApplication.class);
 //		app.setBannerMode(Banner.Mode.OFF);
 		app.run(args);
