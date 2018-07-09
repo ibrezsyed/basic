@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.myapp.config.ApplicationProperties;
@@ -28,5 +30,17 @@ public class HomeController {
 		log.info("App properties:"+ prop.getPassword());
 		
 		return new ResponseEntity<>(HttpStatus.OK);
+	}
+	
+	@RequestMapping(value="/{user}", method=RequestMethod.GET)
+	public String getUser(@PathVariable Long user) {
+
+		return "Syed Ibrez";
+	}
+	
+	@RequestMapping(value="/{user}/customers", method=RequestMethod.GET)
+	public String getUserCustomers(@PathVariable Long user) {
+
+		return "Customers";
 	}
 }
