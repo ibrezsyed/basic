@@ -15,10 +15,11 @@ public class CustomerDto {
     private String name;
     
     @NotNull
-    @Size(min=4, message="Atles=ast 4 Characters in Emial")
+    @Size(min=4, message="Atlesast 4 Characters in Emial")
     private String email;
     
     @NotNull
-    @Size(min=10, max= 13 , message="Atleast 10 numbers")
+    @Size(min=10 , message="Atleast 10 numbers")
+    @Size( max = 13, message = "Maximum 13 Numbers Allowed")
     private String mobNumber;
 }
